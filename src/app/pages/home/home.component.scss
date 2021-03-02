@@ -1,0 +1,11 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.home {
+
+  @include curve-and-circle-background(
+    "../assets/curve.svg",
+    "../assets/circle.svg"
+  );
+
+}

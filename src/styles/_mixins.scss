@@ -1,0 +1,30 @@
+@mixin primary-font($font-size) {
+  font-size: $font-size;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+@mixin secondary-font($font-size) {
+  font-size: $font-size;
+  font-family: "Open Sans", sans-serif;
+}
+@mixin main-content-container() {
+  max-width: 1440px;
+}
+@mixin curve-and-circle-background($curve, $circle) {
+  background-size: 100%, 33%;
+  background-position: 50% 0%, 127% 100%;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url($curve), url($circle);
+}
+@mixin curve-and-square-background($curve, $square, $square2, $square3) {
+  background-size: 100%, 5%, 5%, 5%;
+  background-position: 50% 38%, 10% 15%, 90% 20%, 25% 80%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-image: url($curve), url($square), url($square2), url($square3);
+  @media only screen and (max-width: 768px) {
+    background-size: 150%, 5%, 5%, 5%;
+    background-position: 50% 86%, 10% 15%, 90% 20%, 25% 80%;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-image: url($curve), url($square), url($square2), url($square3);
+  }
+}

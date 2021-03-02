@@ -1,0 +1,23 @@
+<div class="team-card">
+  <section class="team-card__top-line">
+    <section class="team-card__picture">
+      <img [src]="teamMember.img ? './assets/team/' + teamMember.img : null" />
+    </section>
+    <section class="team-card__title">
+      <h2>{{ teamMember.name }}</h2>
+      <p>Employee ID: {{ teamMember.emp_id }}</p>
+    </section>
+    <section class="team-card__buttons">
+      <button><img src="./assets/pen.svg" /></button>
+      <button><img src="./assets/close.svg" /></button>
+    </section>
+  </section>
+  <section class="team-card__info">
+    <p>Birthdate: {{ teamMember.birthdate }}</p>
+    <p>Address: {{ teamMember.address }}</p>
+    <p>Status: {{ teamMember.status }}</p>
+    <p>Position: {{ teamMember.position }}</p>
+    <p>Created: {{ teamMember.created }}</p>
+    <p>Updated: {{ teamMember.updated }}</p>
+  </section>
+</div>

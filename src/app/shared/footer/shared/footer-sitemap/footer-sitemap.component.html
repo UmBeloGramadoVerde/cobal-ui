@@ -1,0 +1,8 @@
+<div class="sitemap">
+  <section *ngFor="let item of sitemap" class="sitemap__section">
+    <h3>{{ item.title }}</h3>
+    <a [routerLink]="link.url" *ngFor="let link of item.pages">{{
+      link.label
+    }}</a>
+  </section>
+</div>

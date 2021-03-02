@@ -1,0 +1,59 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/variables";
+
+.team-card {
+  text-align: left;
+  display: inline-block;
+  box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 25%);
+  background-color: $primary;
+  width: 100%;
+  &__top-line {
+    display: flex;
+    padding: 1rem;
+    border-bottom: 1px solid $secondary;
+    align-items: center;
+  }
+  &__picture {
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    background-color: $secondary;
+    border-radius: 5rem;
+    margin-right: 1rem;
+    img {
+      border-radius: 5rem;
+      max-width: 5rem;
+    }
+  }
+  &__title {
+    flex-direction: column;
+    display: flex;
+    h2 {
+      @include primary-font(1.25rem);
+      color: $dark-gray;
+    }
+    p {
+      @include secondary-font(0.75rem);
+      color: $gray;
+    }
+  }
+  &__buttons {
+    display: flex;
+    margin-left: auto;
+    margin-bottom: auto;
+    img {
+      width: 1rem;
+      height: 1rem;
+    }
+    button {
+      background: none;
+      border: none;
+    }
+  }
+  &__info {
+    @include secondary-font(0.75rem);
+    color: $gray;
+    padding: 1rem;
+  }
+}

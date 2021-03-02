@@ -1,0 +1,77 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.new-employee {
+  @include curve-and-square-background(
+    "../assets/curve.svg",
+    "../assets/el-1.svg",
+    "../assets/el-2.svg",
+    "../assets/el-3.svg"
+  );
+
+  display: block;
+  text-align: center;
+  width: 100%;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+
+  h1 {
+    @include primary-font(2rem);
+    color: $secondary;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  &__form {
+    width: 40%;
+    margin: auto;
+    form {
+      .form-group {
+        label {
+          @include secondary-font(0.75rem);
+          color: $secondary;
+          position: relative;
+          left: 0%;
+          top: 2.1rem;
+          display: flex;
+          margin-left: 2rem;
+        }
+        .form-control {
+          @include secondary-font(0.75rem);
+          color: $secondary;
+          width: -webkit-fill-available;
+          padding-left: 8rem;
+          padding-top: 1rem;
+          padding-bottom: 1rem;
+          border: 1px solid rgba(0, 0, 0, 0.25);
+          border-radius: 0.25rem;
+        }
+      }
+      .half-line {
+        width: 48%;
+        display: inline-block;
+        margin-right: 4%;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      button {
+        margin-top: 5rem;
+        @include secondary-font(0.75rem);
+        color: $primary;
+        background-color: $secondary;
+        padding: 1rem 3rem 1rem 3rem;
+        border: none;
+        border-radius: 2rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .new-employee {
+    &__form {
+      width: 66%;
+    }
+  }
+}

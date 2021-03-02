@@ -1,0 +1,24 @@
+<div class="header-container">
+    <div class="header">
+        <section class="header__top-line-mobile">
+            <section class="header__logo">
+                <a [routerLink]="['/']"><img src="./assets/logo.png"/></a>
+            </section>
+            <section class="header__navigation-menu-toggle" (click)="menu.classList.toggle('header__navigation-menu--closed')">
+                <svg height="384pt" viewBox="0 -53 384 384" width="384pt" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m368 154.667969h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                    <path d="m368 32h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                    <path d="m368 277.332031h-352c-8.832031 0-16-7.167969-16-16s7.167969-16 16-16h352c8.832031 0 16 7.167969 16 16s-7.167969 16-16 16zm0 0"/>
+                </svg>
+            </section>
+        </section>
+        <section class="header__navigation-menu" #menu>
+        <section class="header__navigation-menu--open" (click)="menu.classList.toggle('header__navigation-menu--closed')">
+            <a [routerLink]="['/home']">Home</a>
+            <a [routerLink]="['/home']">Absences</a>
+            <a [routerLink]="['/team']">Employees</a>
+            <a [routerLink]="['/form']">New Employee</a>
+        </section>
+        </section>
+    </div>
+</div>

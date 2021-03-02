@@ -1,0 +1,17 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/variables";
+
+.socials {
+  &__icons {
+    a > img {
+      height: 2rem;
+      width: 2rem;
+      margin-right: 10%;
+    }
+  }
+  &__text {
+    @include secondary-font(0.75rem);
+    margin-bottom: 0.25rem;
+    color: $primary;
+  }
+}

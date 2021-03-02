@@ -1,0 +1,42 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.team {
+  @include curve-and-square-background(
+    "../assets/curve.svg",
+    "../assets/el-1.svg",
+    "../assets/el-2.svg",
+    "../assets/el-3.svg"
+  );
+
+  @include main-content-container();
+  width: 80%;
+  display: block;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 15rem;
+  margin: auto;
+
+  h1 {
+    @include primary-font(2rem);
+    color: $secondary;
+    margin-top: 0;
+    margin-bottom: 5rem;
+  }
+
+  &__card-container {
+    display: grid;
+    grid-template-columns: 47% 47%;
+    gap: 6%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .team {
+    padding-bottom: 17rem;
+    &__card-container {
+      grid-template-columns: 100%;
+      gap: 2%;
+    }
+  }
+}

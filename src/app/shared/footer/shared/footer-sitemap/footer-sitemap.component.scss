@@ -1,0 +1,21 @@
+@import "../../../../../styles/mixins";
+@import "../../../../../styles/variables";
+
+.sitemap {
+  display: flex;
+  justify-content: space-between;
+  &__section {
+    display: flex;
+    flex-direction: column;
+    h3 {
+      @include primary-font(0.9rem);
+      color: $primary;
+    }
+    a {
+      @include secondary-font(0.75rem);
+      margin-bottom: 0.25rem;
+      text-decoration: none;
+      color: $primary;
+    }
+  }
+}

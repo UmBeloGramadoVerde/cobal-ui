@@ -1,0 +1,6 @@
+@import "../styles/mixins";
+@import "../styles/variables";
+
+.outlet {
+  min-height: calc(100vh - 28.75rem);
+}

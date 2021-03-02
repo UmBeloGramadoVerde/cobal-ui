@@ -1,0 +1,60 @@
+<div class="new-employee">
+  <h1>New Employee</h1>
+
+  <section class="new-employee__form">
+    <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+
+      <div class="form-group">
+        <label for="emp_id">Employee ID:</label>
+        <input type="text" class="form-control" id="emp_id"
+               [(ngModel)]="formContent.emp_id" name="emp_id"
+               #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name"
+               [(ngModel)]="formContent.name" name="name"
+               #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="birthdate">Birthdate:</label>
+        <input type="text" class="form-control" id="birthdate"
+               [(ngModel)]="formContent.birthdate" name="birthdate"
+               #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="address">Address:</label>
+        <input type="text" class="form-control" id="address"
+               [(ngModel)]="formContent.address" name="address"
+               #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="status">Status:</label>
+        <input type="text" class="form-control" id="status"
+               [(ngModel)]="formContent.status" name="status"
+               #name="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="position">Position:</label>
+        <input type="text" class="form-control" id="position"
+               [(ngModel)]="formContent.position" name="position"
+               #name="ngModel">
+      </div>
+      <div class="form-group  half-line">
+        <label for="created">Created:</label>
+        <input type="text" class="form-control" id="created"
+               [(ngModel)]="formContent.created" name="created"
+               #name="ngModel">
+      </div>
+      <div class="form-group  half-line">
+        <label for="updated">Updated:</label>
+        <input type="text" class="form-control" id="updated"
+               [(ngModel)]="formContent.updated" name="updated"
+               #name="ngModel">
+      </div>
+
+      <button type="submit" class="btn btn-success" [disabled]="!employeeForm.form.valid">Submit</button>
+    </form>
+  </section>
+
+</div>

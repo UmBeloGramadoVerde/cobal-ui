@@ -1,0 +1,9 @@
+<div class="team">
+  <h1>Team</h1>
+  <section class="team__card-container">
+    <app-team-card
+    *ngFor="let member of mockTeam"
+    [teamMember]="member"
+    ></app-team-card>
+  </section>
+</div>

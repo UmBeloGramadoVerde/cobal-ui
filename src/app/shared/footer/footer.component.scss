@@ -1,0 +1,55 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.footer-grid-container {
+  height: 20rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-size: cover, cover;
+  background-position: top, top;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("../../../assets/circle-footer.svg"),
+  url("../../../assets/curve-1.svg");
+}
+.footer-container {
+  background-color: $secondary;
+  padding-top: 5rem;
+  .footer {
+    @include main-content-container();
+    width: 80%;
+    display: grid;
+    grid-template-areas:
+      "socials sitemap"
+      "copyright copyright";
+    grid-template-columns: 30% 60%;
+    gap: 10%;
+    &__socials {
+      grid-area: socials;
+    }
+    &__sitemap {
+      grid-area: sitemap;
+    }
+    &__copy {
+      @include secondary-font(0.75rem);
+      color: $primary;
+      grid-area: copyright;
+      display: block;
+      margin: 0 auto 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    padding-bottom: 13rem;
+    .footer {
+      grid-template-areas: "socials" "sitemap" "copyright";
+      grid-template-columns: 100%;
+      gap: 20%;
+      &__copy {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
