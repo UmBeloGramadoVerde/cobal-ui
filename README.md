@@ -1,6 +1,6 @@
 # CobalUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.3.
+This project was the developed during a speedrun stream, where I tried to do everything as quickly as possible. Given it also was a technical challenge for a recruitment process, I also coded as cleanly as possible. The entire vod of the stream is available at https://youtu.be/zRqmKjPMx2s
 
 ## Development server
 
